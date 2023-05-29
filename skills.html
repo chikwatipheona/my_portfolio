@@ -5,5 +5,61 @@
             MY SKILLS
         </title>
     </head>
-    <link rel="stylesheet" href="styles.css">    
+    <link rel="stylesheet" href="styles.css">
+    <body>
+        <P>
+            Here are some of the areas am skilled in;
+        </P><br>
+        <li>Mobile photography and editing</li>
+        <li>Front end developing</li>
+        <li>Baking cakes and making snacks</li>
+        <li>Graphic disgning</li>
+        
+        <style>
+            .footer {
+               position: fixed;
+               left: 0;
+               bottom: 0;
+               width: 100%;
+               background-color:pink;
+               color: white;
+               text-align: center;
+            }
+        
+        
+            </style>
+            <div class="footer">
+                <style>
+            
+                    .progress-bar {
+                      width: 100%;
+                      height: 20px;
+                      border: 1px solid #fffdfd;
+                    }
+                
+                    .progress-bar-fill {
+                      height: 100%;
+                      background-color: rgb(204, 143, 186);
+                    }
+                  </style>
+                  <h1>MY PROGRESS</h1>
+            
+                  <div class="progress-bar">
+                    <div class="progress-bar-fill" id="progress"></div>
+                  </div>
+                
+                  <script>
+                    
+                    function updateProgressBar(value, max) {
+                      var progressElement = document.getElementById('progress');
+                      var progressWidth = (value / max) * 100;
+                      progressElement.style.width = progressWidth + '%';
+                    }
+                    updateProgressBar(75, 100);
+                  </script>     
+            
+            </div>
+        
+        
+    </body>    
 </html>

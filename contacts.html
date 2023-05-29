@@ -20,19 +20,26 @@
                 <option>GRAPHIC DESIGN</option>
                 <option>PC REPAIRING</option>
                 <option>FRONT END DESIGNIGN</option>
+                <option>MOBILE PHOTOHRAPHY</option>
               </select><br>
         </form>
-        <script type="text/javascript">
-            function myfunction(){
-                document.getElementById("frm1").submit();
-            }
+        <button onclick="myFunction()">submit</button>
 
+        <p id="demo"></p>
+        
+        <script>
+        function myFunction() {
+          var txt;
+          if (confirm("Are you sure you want to submit?")) {
+            txt = "sent!";
+          } else {
+            txt = "canceled!";
+          }
+          document.getElementById("demo").innerHTML = txt;
+        }
         </script>
-        <P>
-            You can also find me through the following socials<br>
-            
-
-        </P>
+        
+    
     </body>
 </html>
     
