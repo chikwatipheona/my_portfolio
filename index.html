@@ -3,133 +3,30 @@
  <head>
    <title>Pheona's Portfolio</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-.slideshow-container {
-  max-width: 500px;
-  position: relative;
-  margin: auto;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-* {box-sizing: border-box;}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #e9e9e9;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #2196F3;
-  color: white;
-}
-
-.topnav .search-container {
-  float: right;
-}
-
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-}
-
-.topnav .search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #6e1919;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
-
-.topnav .search-container button:hover {
-  background: #a95d5d;
-}
-
-
-</style>
 </head>
  <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
  <link rel="stylesheet" href="styles.css">
  <body>
    Welcome to my portfolio.
-   
-</style>
+   <p id="greet" style="color: rgb(6, 57, 2); font-size: xx-large;" ></p>
+     <script>
+      const time = new Date().getHours();
+      let greeting;
+      if (time < 11){
+        greeting= "Good Morning";
+      }
+      else if (time<18){
+        greeting= "Good Day";
+      }
+      else{
+        greeting= "Good Evening";
+      }
+      document.getElementById("greet").innerHTML=greeting
+     </script>
+     
+ <p>
+
     <header style="color: blueviolet;"><h1>Pheona Chikwati</h1></header>
       <nav><div class="topnav">
         <ul class ="menu" >
@@ -147,8 +44,7 @@ body {
           </ul>
           </div>
       </nav>
-      
- <p>
+     
   <style>
     img{
       border: 5px solid #333;
@@ -164,11 +60,6 @@ body {
     As an IT personel i'm skilled in programming in c, computer repairing, data analysis with python.......... <button><a href="skills.html">MORE</a></button>
   </p>
 
-   <style>
-    li{
-      display: inline-block;
-    }
-   </style>
    </div>
    <div class="slideshow-container">
 
@@ -236,19 +127,7 @@ body {
       dots[slideIndex-1].className += " active";
     }
     </script>
-   <style>
-    .footer {
-       position: fixed;
-       left: 0;
-       bottom: 0;
-       width: 100%;
-       background-color:pink;
-       color: white;
-       text-align: center;
-    }
-    
-
-    </style>
+  
     <div class="footer">
       <li><img src="instagram.png"></li>
       <li><img src="linkedin.png"></li>

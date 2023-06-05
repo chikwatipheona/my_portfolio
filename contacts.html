@@ -5,6 +5,25 @@
     </head>
     <link rel="stylesheet" href="styles.css">
     <body>
+    </head>
+    <body>
+      <header style="color: blueviolet;"><h1>Pheona Chikwati</h1></header>
+      <nav><div class="topnav">
+        <ul class ="menu" >
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="skills.html">SKILLS</a></li>
+          <li><a class="active" href="contacts.html">CONTACTS</a></li>
+          <li><a href="projects.html">PROJECTS</a></li>
+          <div class="search-container">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+      
+          </ul>
+          </div>
+      </nav>
         <header style="color: blueviolet;"><h1>Contacts</h1></header> 
         <h3>
             FOR BOOKINGS
@@ -25,7 +44,7 @@
         </form>
         <button onclick="myFunction()">submit</button>
 
-        <p id="demo"></p>
+        <p id="mybutton"></p>
         
         <script>
         function myFunction() {
@@ -35,7 +54,7 @@
           } else {
             txt = "canceled!";
           }
-          document.getElementById("demo").innerHTML = txt;
+          document.getElementById("mybutton").innerHTML = txt;
         }
         </script>
         
