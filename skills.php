@@ -4,18 +4,23 @@
         <title>
             MY SKILLS
         </title>
+
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
-    <link rel="stylesheet" href="styles.css">
+    
+  
     <body>
-    </head>
-    <body>
+   
+
+      
+
       <header style="color: blueviolet;"><h1>Pheona Chikwati</h1></header>
       <nav><div class="topnav">
         <ul class ="menu" >
-          <li><a href="index.html">HOME</a></li>
-          <li><a class="active" href="skills.html">SKILLS</a></li>
-          <li><a href="contacts.html">CONTACTS</a></li>
-          <li><a href="projects.html">PROJECTS</a></li>
+          <li><a href="index.php">HOME</a></li>
+          <li><a class="active" href="skills.php">SKILLS</a></li>
+          <li><a href="contacts.php">CONTACTS</a></li>
+          <li><a href="projects.php">PROJECTS</a></li>
           <div class="search-container">
             <form action="/action_page.php">
               <input type="text" placeholder="Search.." name="search">
@@ -30,11 +35,27 @@
         <P>
             Here are some of the areas am skilled in;
         </P><br>
-        <li>-Mobile photography and editing</li><br>
-        <li>-Front end developing</li><br>
-        <li>-Baking cakes and making snacks</li><br>
-        <li>-Graphic disgning</li><br>
-        <li>-PC repairing </li>
+        <?php
+    require_once 'config.php';
+$query="SELECT id ,skill_name FROM skills";
+$result=mysqli_query($conn,$query);
+
+if(!$result){
+  die("Error:".mysqli_error($conn));
+}
+  ?>
+<div>
+<?php while($row = mysqli_fetch_assoc($result)) {?>
+<div>
+<h2 style="size: small"><?php echo $row['skill_name'];?></h2>
+</div>
+<?php } ?>
+</div>
+
+<?php
+mysqli_free_result($result);
+mysqli_close($conn);
+?>
         
        
         
