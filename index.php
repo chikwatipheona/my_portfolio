@@ -3,6 +3,9 @@
  <head>
    <title>Pheona's Portfolio</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <?php 
+   require_once 'config.php';
+   ?>
 </head>
  <meta charset="utf-8">
  
@@ -46,12 +49,99 @@
       </nav>
      
   <style>
-    img{
+    .img{
       border: 5px solid #333;
       display: block;
       margin-left: auto;
       margin-right: auto;
     }
+    .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:pink;
+    color: white;
+    text-align: center;
+ }
+ .topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #6e1919;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #a95d5d;
+}
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .row > .column {
+    padding: 0 8px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .column {
+    float: left;
+    width: 25%;
+  }
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+ * {background-color: rgb(192, 209, 225);}
   </style>
   <img src="meee.jpg" width="300" height="200" class="center"><br>
   Pheona Chikwati is a young woman who is studying bachelors of Science in Infomation Comunication and Technology at Mzuzu University in her second year.<br>
