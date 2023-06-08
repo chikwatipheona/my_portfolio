@@ -1,4 +1,4 @@
-<!OOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Contacts</title>
@@ -10,10 +10,10 @@
       <header style="color: blueviolet;"><h1>Pheona Chikwati</h1></header>
       <nav><div class="topnav">
         <ul class ="menu" >
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="skills.html">SKILLS</a></li>
-          <li><a class="active" href="contacts.html">CONTACTS</a></li>
-          <li><a href="projects.html">PROJECTS</a></li>
+          <li><a href="index.php">HOME</a></li>
+          <li><a href="skills.php">SKILLS</a></li>
+          <li><a class="active" href="contacts.php">CONTACTS</a></li>
+          <li><a href="projects.php">PROJECTS</a></li>
           <div class="search-container">
             <form action="/action_page.php">
               <input type="text" placeholder="Search.." name="search">
@@ -57,7 +57,24 @@
           document.getElementById("mybutton").innerHTML = txt;
         }
         </script>
-        
+        <?php
+
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $name = $_POST["name"];
+        $number = $_POST["number"];
+        $email = $_POST["email"];
+
+        $sql = "INSERT INTO contacts (Name, Number, email) VALUES ('$name', '$number', '$email')";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "<p class='message success'>Data saved successfully!</p>";
+        } else {
+            echo "<p class='message error'>Error: " . $sql . "<br>" . $conn->error . "</p>";
+        }
+
+        $conn->close();
+    }
+    ?>  
     
     </body>
 </html>
