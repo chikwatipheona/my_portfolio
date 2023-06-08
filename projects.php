@@ -6,12 +6,16 @@
         <link rel="stylesheet" href="styles.css">
  </head>
     <body>
+    <?php
+     require_once 'config.php';
+    ?>
+
       <header style="color: blueviolet;"><h1>Pheona Chikwati</h1></header>
       <nav><div class="topnav">
         <ul class ="menu" >
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="skills.html">SKILLS</a></li>
-          <li><a href="contacts.html">CONTACTS</a></li>
+          <li><a href="index.php">HOME</a></li>
+          <li><a href="skills.php">SKILLS</a></li>
+          <li><a href="contacts.php">CONTACTS</a></li>
           <li><a class="active" href="projects.html">PROJECTS</a></li>
           <div class="search-container">
             <form action="/action_page.php">
