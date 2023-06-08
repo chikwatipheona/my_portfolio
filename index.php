@@ -30,10 +30,10 @@
     <header style="color: blueviolet;"><h1>Pheona Chikwati</h1></header>
       <nav><div class="topnav">
         <ul class ="menu" >
-          <li><a class="active" href="index.html">HOME</a></li>
-          <li><a href="skills.html">SKILLS</a></li>
-          <li><a href="contacts.html">CONTACTS</a></li>
-          <li><a href="projects.html">PROJECTS</a></li>
+          <li><a class="active" href="index.php">HOME</a></li>
+          <li><a href="skills.php">SKILLS</a></li>
+          <li><a href="contacts.php">CONTACTS</a></li>
+          <li><a href="projects.php">PROJECTS</a></li>
           <div class="search-container">
             <form action="/action_page.php">
               <input type="text" placeholder="Search.." name="search">
