@@ -4,6 +4,7 @@
     <title>My Skills</title>
     <style>
         /* Add your CSS styles here */
+        
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -12,6 +13,7 @@
         }
 
         header {
+            position: fixed;
             background-color: blueviolet;
             color: #fff;
             /* padding: 20px; */

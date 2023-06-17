@@ -273,50 +273,73 @@
     </div>
 
     <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="image1.jpg" alt="Image 1">
-            <div class="slide-description">
-                <h2>Web Development</h2>
-                <p>A description of web development skills.</p>
-            </div>
-        </div>
 
-        <div class="mySlides fade">
-            <img src="image2.jpg" alt="Image 2">
-            <div class="slide-description">
-                <h2>Data Analysis</h2>
-                <p>A description of data analysis skills.</p>
-            </div>
-        </div>
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="designing.jpg" style="width:100%">
+  <div class="text">GRAPHIC DISGNIGN</div>
+</div>
 
-        <div class="mySlides fade">
-            <img src="image3.jpg" alt="Image 3">
-            <div class="slide-description">
-                <h2>Graphic Design</h2>
-                <p>A description of graphic design skills.</p>
-            </div>
-        </div>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="cakes.jpg" style="width:100%">
+  <div class="text">BAKINGS</div>
+</div>
 
-        <div class="mySlides fade">
-            <img src="image4.jpg" alt="Image 4">
-            <div class="slide-description">
-                <h2>Graphic Design</h2>
-                <p>A description of graphic design skills.</p>
-            </div>
-        </div>
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="frontEnd.png" style="width:100%">
+  <div class="text">FRONT END DEVELOPING</div>
+</div>
 
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="mobilePhoto.jpg" style="width:100%">
+  <div class="text">MOBILE PHOTOHRAPHY</div>
+</div>
 
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
 
-    <div style="text-align: center;">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
+</div>
+<br>
 
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+        
     <div class="footer">
         <h1>MY PROGRESS</h1>
         <div class="progress-bar">
@@ -334,34 +357,6 @@
         </script>
     </div>
 
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
-    </script>
-</body>
+   </body>
 
 </html>
