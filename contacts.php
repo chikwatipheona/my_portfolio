@@ -3,7 +3,6 @@
 <head>
   <title>Contacts</title>
   <style>
-    /* Add your CSS styles here */
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
@@ -14,7 +13,6 @@
     .header {
       background-color: #333;
       color: #fff;
-      /* padding: 20px; */
       text-align: center;
     }
 
@@ -86,9 +84,6 @@
   </style>
 </head>
 <body>
-  <!-- <div class="header">
-    <h1>Pheona Chikwati</h1>
-  </div> -->
   
   <div class="navigation">
     <ul>
@@ -109,14 +104,13 @@
     $statusMessage = '';
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-      // Retrieve form data
+      // getting data from a form 
       $name = $_POST["fullname"];
       $phone = $_POST["phone"];
       $email = $_POST["email"];
       $service = $_POST["service"];
       $message = $_POST["message"];
   
-      // Prepare and execute SQL query
       require_once 'config.php';
   
       $conn = getConnection();

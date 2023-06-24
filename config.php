@@ -4,15 +4,15 @@ function getConnection() {
     $username = "root";
     $password = "";
 
-    // Create a connection
+    
     $conn = new mysqli($servername, $username, $password);
 
-    // Check the connection
+    
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Create the database if it doesn't exist
+    
     $sql = "CREATE DATABASE IF NOT EXISTS portifolio";
     if ($conn->query($sql) === TRUE) {
         // echo "Database 'portifolio' created successfully.<br>";
@@ -35,7 +35,6 @@ function getConnection() {
         // echo "Error creating table: " . $conn->error . "<br>";
     }
 
-    // Create the 'booking' table
     $sql = "CREATE TABLE IF NOT EXISTS booking (
         id INT(11) AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
@@ -44,23 +43,20 @@ function getConnection() {
         message TEXT NOT NULL,
         service VARCHAR(255) NOT NULL
     )";
-    if ($conn->query($sql) === TRUE) {
-        // echo "Table 'booking' created successfully.<br>";
-    } else {
-        // echo "Error creating table: " . $conn->error . "<br>";
+    if (!$conn->query($sql) === TRUE) {
+      
+        echo "Error creating table: " . $conn->error . "<br>";
     }
 
-    // Create the 'projects' table
     $sql = "CREATE TABLE IF NOT EXISTS projects (
         id INT(11) AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
         description TEXT,
         status VARCHAR(50)
     )";
-    if ($conn->query($sql) === TRUE) {
-        // echo "Table 'projects' created successfully.<br>";
-    } else {
-        // echo "Error creating table: " . $conn->error . "<br>";
+    if (!$conn->query($sql) === TRUE) {
+  
+        echo "Error creating table: " . $conn->error . "<br>";
     }
 
     return $conn;

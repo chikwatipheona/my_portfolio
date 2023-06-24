@@ -3,7 +3,6 @@
 <head>
     <title>My Skills</title>
     <style>
-        /* Add your CSS styles here */
         
         body {
             font-family: Arial, sans-serif;
@@ -16,7 +15,6 @@
             position: fixed;
             background-color: blueviolet;
             color: #fff;
-            /* padding: 20px; */
             text-align: center;
         }
 
@@ -129,10 +127,6 @@
 </head>
 
 <body>
-    <header>
-        <!-- <h1>Pheona Chikwati</h1> -->
-    </header>
-
     <nav>
         <div class="topnav">
             <ul class="menu">
@@ -204,7 +198,6 @@
                 var progressWidth = (value / max) * 100;
                 progressElement.style.width = progressWidth + '%';
             }
-            // Example: Set progress to 75% (change the value as needed)
             updateProgressBar(75, 100);
         </script>
     </div>

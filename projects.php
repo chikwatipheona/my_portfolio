@@ -3,7 +3,6 @@
 <head>
     <title>My Projects</title>
     <style>
-        /* Add your CSS styles here */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -479,10 +478,7 @@ img {vertical-align: middle;}
 </head>
 
 <body>
-    <header>
-        <!-- <h1>Pheona Chikwati</h1> -->
-    </header>
-
+   
     <nav>
         <div class="topnav">
             <ul class="menu">
@@ -528,7 +524,7 @@ img {vertical-align: middle;}
                 <div class="project-item">
                     <h3><?php echo $row['name']; ?></h3>
                     <p><?php echo $row['description']; ?></p>
-                    <p>Status: <?php echo $row['status']; ?></p>
+                    
                 </div>
             <?php } ?>
             <a class="view-all-projects-btn" href="projects.php">View All Projects</a>
@@ -659,7 +655,7 @@ img {vertical-align: middle;}
                 var progressWidth = (value / max) * 100;
                 progressElement.style.width = progressWidth + '%';
             }
-            // Example: Set progress to 75% (change the value as needed)
+            
             updateProgressBar(75, 100);
         </script>
     </div>

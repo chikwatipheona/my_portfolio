@@ -3,7 +3,7 @@
 <head>
     <title>Pheona's Portifolio</title>
     <style>
-        /* Add your CSS styles here */
+        
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -14,7 +14,6 @@
         header {
             background-color: blueviolet;
             color: #fff;
-            /* padding: 20px; */
             text-align: center;
         }
 
@@ -239,10 +238,6 @@
 </head>
 
 <body>
-    <header>
-        <!-- <h1>Pheona Chikwati</h1> -->
-        <!-- <img src="photo.jpg" alt="Profile Photo" class="profile-photo"> -->
-    </header>
 
     <nav>
         <div class="topnav">
@@ -352,8 +347,7 @@ function showSlides(n) {
                 var progressWidth = (value / max) * 100;
                 progressElement.style.width = progressWidth + '%';
             }
-            // Example: Set progress to 75% (change the value as needed)
-            updateProgressBar(75, 100);
+                       updateProgressBar(75, 100);
         </script>
     </div>
 
